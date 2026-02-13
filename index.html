@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jelin Forever</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #87CEFA, #B0E0E6);
+      color: #333;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .header-title {
+      font-size: 30px;
+      color: #1E90FF;
+      margin: 0;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #1E90FF;
+      margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 1s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1);
+    }
+
+    .details {
+      text-align: center;
+    }
+
+    .toggle-btn {
+      padding: 12px 26px;
+      background: #1E90FF;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #187bcd;
+    }
+
+    .detail-content {
+      margin-top: 25px;
+      text-align: center;
+      line-height: 1.8;
+      display: none;
+      animation: fadeDetail 1s ease-in-out;
+    }
+
+    .detail-content.visible {
+      display: block;
+    }
+
+    @keyframes fadeDetail {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .trait-img {
+      display: block;
+      margin: 12px auto 16px;
+      width: 140px;
+0      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .button a {
+      padding: 12px 24px;
+      background-color: #1E90FF;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .button a:hover {
+      background-color: #187bcd;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="header-title">Tentang Yayang</h1>
+    </header>
+
+    <section class="profile">
+      <img src="linda.jpg" alt="Foto Profil" class="profile-img" />
+      <h2 class="name">Linda Sumi Ramadhanti</h2>
+      <p class="job-title"><strong>Pacarku</strong></p>
+    </section>
+
+    <section class="details">
+      <button class="toggle-btn" onclick="toggleDetails()">Tampilkan Cerita</button>
+
+      <div class="detail-content">
+<p>
+  Hai, izinkan aku bercerita sebentar. Tentang seorang perempuan bernama
+  <strong>Yayang</strong>. Perempuan yang olehku dipanggil
+  <strong>Yayang</strong>. Bukan karena namanya harus disingkat, tapi karena
+  rasanya lebih dekat di hati.
+</p>
+
+<p>
+  Yayang adalah perempuan yang kelihatannya biasa saja bagi dunia, tapi luar
+  biasa bagiku. Dia menjalani hari-harinya dengan cara yang tidak semua orang
+  sanggup menirunya. Kadang dia lelah, kadang dia diam, tapi entah bagaimana,
+  dia selalu bertahan. Dan aku? Aku hanya ingin ada di sampingnya, memastikan
+  dia tidak merasa sendirian.
+</p>
+
+<p>
+  Ada sesuatu tentang Yayang, yang membuatku selalu merasa ingin pulang. Setiap
+  pesanku dibalas dengan antusias, setiap ceritaku didengarkan dengan sabar.
+  Dia adalah seseorang yang membuat hal-hal kecil terasa penting, dan hal-hal
+  berat terasa sedikit lebih ringan.
+</p>
+
+<p>
+  Yayang punya banyak sisi. Seperti langit sore, dia tidak pernah benar-benar
+  satu warna. Tapi ada beberapa yang paling sering muncul.
+</p>
+
+<p>
+  <strong>Marah</strong><br />
+  <img src="marah.jpg" class="trait-img" />
+  Yayang bisa marah. Terutama kalau aku berbuat salah, atau tiba-tiba
+  menghilang tanpa kabar. Marahnya bukan marah yang menakutkan, lebih seperti
+  cara hatinya berkata bahwa dia peduli. Dan lucunya, dia sangat mudah luluh.
+  Sedikit perhatian, sedikit kejujuran, dan satu kalimat lembut dariku biasanya
+  sudah cukup.
+</p>
+
+<p>
+  <strong>Pemalu</strong><br />
+  <img src="pemalu.jpg" class="trait-img" />
+  Di balik semua keberaniannya, Yayang adalah perempuan yang pemalu. Di tempat
+  yang membuatnya tidak nyaman, dia lebih memilih diam. Aku sering menjadi
+  suaranya, menyampaikan apa yang sebenarnya ingin dia katakan. Bukan karena
+  dia tidak mampu, tapi karena hatinya terlalu lembut untuk terburu-buru.
+</p>
+
+<p>
+  <strong>Manja</strong><br />
+  <img src="manja.jpg" class="trait-img" />
+  Dan tentu saja, Yayang itu manja. Manja yang tidak dibuat-buat. Manja yang
+  datang tiba-tiba, lewat tatapan mata atau permintaan pelukan. Saat itu
+  terjadi, aku selalu berpikir satu hal: perempuan seperti ini, pantas
+  dijaga sebaik mungkin.
+</p>
+
+<p>
+  Sebenarnya masih banyak yang ingin aku ceritakan tentang Yayang. Tentang
+  caranya tertawa, caranya diam, caranya membuat aku merasa cukup hanya dengan
+  kehadirannya. Tapi beberapa hal memang lebih baik disimpan di hati. Lagi
+  pula, kalau aku ceritakan semuanya, nanti ada yang jatuh cinta juga. Bisa
+  saingan denganku.
+</p>
+
+<p><strong>Bandung, 14 Februari 2026.</strong></p>
+
+
+        <div class="button">
+          <a href="https://instagram.com/jelin.journey" target="_blank">
+            Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026, Jeje</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDetails() {
+      const detailContent = document.querySelector(".detail-content");
+      const button = document.querySelector(".toggle-btn");
+
+      detailContent.classList.toggle("visible");
+      button.textContent = detailContent.classList.contains("visible")
+        ? "Sembunyikan Cerita"
+        : "Tampilkan Cerita";
+    }
+  </script>
+</body>
+</html>
